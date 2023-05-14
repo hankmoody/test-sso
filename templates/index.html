@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Flask App</title>
+  </head>
+  <body>
+    <h1>SSO Tests</h1>
+    {% for key, value in directory.items() %}
+       <h3>{{ value['name'] }}</h3>
+       <a href='{{value['auth_url']}}'>Log in</a>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Information Retrieved</title>
+  </head>
+  <body>
+    <h3>{{idp_name}}</h3> 
+    {% if userinfo|length > 0 %}
+      <p>Name: {{userinfo['name']}}
+      <br>Family name: {{userinfo['family_name'] }}
+      <br>Given name: {{userinfo['given_name'] }}
+      <br>Email: {{userinfo['email'] }}
+      <br>Birth date: {{userinfo['birthdate'] }}</p>
+    {% endif %}
+    <h4>Decoded ID token</h4>
+    <pre>{{decoded_id_token}}</pre>
+  </body>
+</html>
